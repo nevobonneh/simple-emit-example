@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import eventEmitter from "./eventEmitter";
 
 
-const SimpleDiv = () => {
-    const [value, setValue] = useState<String>('')
-    const handleEvent = (data: any) =>{
-        setValue(data.counter)
-    }
-    eventEmitter.addListener('event',handleEvent)
+const SimpleDiv = (props:Props) => {
+    const { counter } = props;
 
     return(
-        <div>{value}</div>
+        <div>{counter}</div>
     );
 }
 
+interface Props {
+    counter: Number
+}
 export default SimpleDiv
