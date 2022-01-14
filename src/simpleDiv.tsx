@@ -4,8 +4,8 @@ import eventEmitter from "./eventEmitter";
 
 const SimpleDiv = () => {
     const [value, setValue] = useState<String>('')
-    const handleEvent = () =>{
-        setValue('Hello World!')
+    const handleEvent = (data: any) =>{
+        setValue(data.counter)
     }
     eventEmitter.addListener('event',handleEvent)
 
