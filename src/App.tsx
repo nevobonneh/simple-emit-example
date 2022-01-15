@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import MagenAppBar from './appBar';
+import AppMenu from './appMenu';
 import eventEmitter from './eventEmitter';
 import SimpleButton from './simpleButton';
 import SimpleDiv from './simpleDiv';
@@ -12,6 +14,7 @@ const App = () => {
   eventEmitter.addListener('event',handleEmit)
   return (
       <>
+        <MagenAppBar/>
         <SimpleButton/>
         <SimpleDiv counter={counter}/>
       </>
