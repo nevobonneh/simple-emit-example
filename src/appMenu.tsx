@@ -32,14 +32,16 @@ const AppMenu = () => {
             anchorEl={anchorEl}
             open={open}
             onClose={handleClose}
-            PaperProps={{
-                style: {
-                width: '20ch',
-                },
-            }}
+            // PaperProps={{
+            //     style: {
+            //         width: '20',
+            //     },
+            // }}
+            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
                 <MenuItem>
-                    <AppsIcon /> Profile
+                    Profile<AppsIcon /> 
                 </MenuItem>
             </Menu>
         </>
