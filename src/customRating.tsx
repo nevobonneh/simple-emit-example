@@ -17,11 +17,11 @@ const CustomRating = (props:Props) => {
     const classes: any = useStyles();
 
     return (
-        <Box
-        sx={{
-            '& > legend': { mt: 2 },
-        }}
-        >
+        // <Box
+        // sx={{
+        //     '& > legend': { mt: 2 },
+        // }}
+        // >
             <Rating
                 classes={{iconFilled: classes[`icon-${value}`]}}
                 name="customized-color"
@@ -34,7 +34,7 @@ const CustomRating = (props:Props) => {
                 emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
                 readOnly
             />
-        </Box>
+        // </Box>
     );
 }
 
